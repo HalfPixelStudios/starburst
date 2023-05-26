@@ -16,7 +16,7 @@ func _physics_process(delta):
 	move_and_slide()
 	
 	# handle shooting
-	if Input.is_action_pressed('shoot'):
+	if Input.is_action_just_pressed('shoot'):
 		var inst = bullet.instantiate()
 		inst.position = self.position
 		get_tree().current_scene.add_child(inst)
