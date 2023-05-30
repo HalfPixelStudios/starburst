@@ -1,16 +1,18 @@
 [gd_scene load_steps=4 format=3 uid="uid://c6k4os3sbxelr"]
 
-[ext_resource type="Script" path="res://scripts/bullet.gd" id="1_w2hec"]
-[ext_resource type="Texture2D" uid="uid://bdtdj0ci7pivl" path="res://sprites/spritesheet.png" id="2_vpvx5"]
+[ext_resource type="Script" path="res://scripts/bullet.gd" id="1_bfxwc"]
+[ext_resource type="Texture2D" uid="uid://bdtdj0ci7pivl" path="res://sprites/spritesheet.png" id="2_2bmwt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hdek1"]
 size = Vector2(2, 2)
 
-[node name="bullet" type="Area2D"]
-script = ExtResource("1_w2hec")
+[node name="PlayerBullet" type="Area2D"]
+collision_layer = 8
+collision_mask = 4
+script = ExtResource("1_bfxwc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_vpvx5")
+texture = ExtResource("2_2bmwt")
 region_enabled = true
 region_rect = Rect2(0, 8, 8, 8)
 

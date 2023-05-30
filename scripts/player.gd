@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 signal bullet_shoot(bullet_scene, spawn_position)
 
-@export var bullet_scene: PackedScene = preload("res://scenes/Bullet.tscn")
+@export var bullet_scene: PackedScene = preload("res://scenes/PlayerBullet.tscn")
 @export var speed: float = 100
 @onready var bullet_spawn = $Marker2D
 
