@@ -18,3 +18,5 @@ shape = SubResource("RectangleShape2D_w7vev")
 texture = ExtResource("1_2lft8")
 region_enabled = true
 region_rect = Rect2(0, 0, 8, 8)
+
+[node name="Marker2D" type="Marker2D" parent="."]

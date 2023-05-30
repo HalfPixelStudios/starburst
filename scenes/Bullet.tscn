@@ -1,16 +1,16 @@
 [gd_scene load_steps=4 format=3 uid="uid://c6k4os3sbxelr"]
 
-[ext_resource type="Texture2D" uid="uid://bdtdj0ci7pivl" path="res://sprites/spritesheet.png" id="1_83tqy"]
-[ext_resource type="Script" path="res://scripts/bullet.gd" id="1_qs8vf"]
+[ext_resource type="Script" path="res://scripts/bullet.gd" id="1_w2hec"]
+[ext_resource type="Texture2D" uid="uid://bdtdj0ci7pivl" path="res://sprites/spritesheet.png" id="2_vpvx5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hdek1"]
 size = Vector2(2, 2)
 
 [node name="bullet" type="Area2D"]
-script = ExtResource("1_qs8vf")
+script = ExtResource("1_w2hec")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_83tqy")
+texture = ExtResource("2_vpvx5")
 region_enabled = true
 region_rect = Rect2(0, 8, 8, 8)
 

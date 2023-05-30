@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var bullet: PackedScene = preload("res://scenes/bullet.tscn")
+@export var bullet: PackedScene = preload("res://scenes/Bullet.tscn")
 @export var speed: float = 10
 
 func _ready():

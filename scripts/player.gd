@@ -1,7 +1,16 @@
 extends CharacterBody2D
 
-@export var bullet: PackedScene = preload("res://scenes/bullet.tscn")
+signal bullet_shoot(bullet_scene, spawn_position)
+
+@export var bullet_scene: PackedScene = preload("res://scenes/Bullet.tscn")
 @export var speed: float = 100
+@onready var bullet_spawn = $Marker2D
+
+func _process(delta):
+	# handle shooting
+	if Input.is_action_just_pressed('shoot'):
+		bullet_shoot.emit(bullet_scene, bullet_spawn.global_position)
+
 
 func _physics_process(delta):
 	
@@ -14,9 +23,3 @@ func _physics_process(delta):
 	velocity = input_dir * speed
 
 	move_and_slide()
-	
-	# handle shooting
-	if Input.is_action_just_pressed('shoot'):
-		var inst = bullet.instantiate()
-		inst.position = self.position
-		get_tree().current_scene.add_child(inst)

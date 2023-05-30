@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://87gviy214svj"]
+
+[ext_resource type="PackedScene" uid="uid://cwre7pomfe73u" path="res://scenes/Player.tscn" id="1_co0mo"]
+[ext_resource type="PackedScene" uid="uid://c0ujo7raol74o" path="res://scenes/Enemy.tscn" id="2_gxmnq"]
+[ext_resource type="Script" path="res://scripts/GameManager.gd" id="4_5w6qc"]
+
+[node name="Level" type="Node2D"]
+script = ExtResource("4_5w6qc")
+
+[node name="Player" parent="." instance=ExtResource("1_co0mo")]
+
+[node name="Enemy" parent="." instance=ExtResource("2_gxmnq")]
+position = Vector2(23, -10)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)
+
+[node name="BulletContainer" type="Node" parent="."]
