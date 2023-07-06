@@ -17,4 +17,5 @@ func _on_player_bullet_shoot(bullet_scene, location):
 	var bullet = bullet_scene.instantiate()
 	bullet.global_position = location
 	bullet_container.add_child(bullet)
+	bullet.dir = Vector2(0, -1)
 	

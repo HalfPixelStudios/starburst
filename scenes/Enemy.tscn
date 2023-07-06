@@ -22,4 +22,7 @@ region_rect = Rect2(8, 0, 8, 8)
 
 [node name="ShootTimer" type="Timer" parent="."]
 
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(0, -2)
+
 [connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]
